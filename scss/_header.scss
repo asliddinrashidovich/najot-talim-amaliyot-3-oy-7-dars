@@ -1,0 +1,45 @@
+header {
+    padding: 50px 0 ;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        ul {
+            display: flex;
+            gap: 60px;
+            li {
+                a {
+                    color: $textcolor;
+                    font-family: DM Sans;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 18.23px;
+                    cursor: pointer;
+                    transition: $trans;
+                    &::after {
+                        content: '';
+                        width: 0;
+                        height: 2px;
+                        border-radius: 3px;
+                        background-color: $maincolor;
+                        position: absolute;
+                        display: flex;
+                        transition: $trans;
+                        margin-top: 3px;
+                    }
+                    &:hover {
+                        color: $maincolor;
+                        &::after {
+                            content: 0;
+                            width: 50px;
+                            color: black
+                        }
+                    }
+                }
+            }
+        }
+        .btn {
+            @include btn;
+        }
+    }
+}

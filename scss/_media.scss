@@ -1,0 +1,189 @@
+@media screen and (max-width: 1130px)   {
+    @mixin header2 {
+        line-height: 30.08px;
+    }
+    header {
+        .container {
+            ul {
+                display: none;
+            }
+            
+        }
+    }
+    .hero {
+        .container {
+            flex-direction: column;
+            img {
+                margin: 0 auto;
+                order: 0;
+            }
+            .hero__content{
+                order: 1;
+            }
+        }
+    }
+    .about {
+        padding-top: 90px;
+        .container {
+            h2 {
+                @include header2;
+                margin-bottom: 40px;
+            }
+            .about__cards {
+                .about__card {
+                    .card__img {
+                        width: 70px;
+                        height: 70px;
+                        img {
+                            width: 60%;
+                        }
+                    }
+                    p {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+    .service {
+        .container {
+            h2 {
+                @include header2;
+            }
+            .service__cards {
+                gap: 10px;
+                .service__card {
+                    .card__img {
+                        width: 60px;
+                        height: 60px;
+                        img {
+                            width: 60%;
+                        }
+                    }
+                    padding: 0 10px 30px 10px;
+                    p {
+                        font-size: 13px;
+                        line-height: 20px;
+                    }
+                    h3 {
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .projects {
+        .container {
+            h2 {
+                @include header2;
+            }
+            .projects__cards {
+                grid-template-columns: 1fr 1fr;
+                p {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    @mixin header2 {
+        font-size: 30px;
+    }
+    @mixin btn {
+        padding: 10px 20px;
+    }
+    header {
+        .container {
+            .btn {
+                @include btn;
+            }
+            .header__img {
+                width: 150px;
+            }
+        }
+    }
+    .hero {
+        .container {
+            .hero__content {
+                h1 {
+                    font-size: 60px;
+                    line-height: 60px;
+                    margin-bottom: 25px;
+                    margin-top: 30px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 18px;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    .about {
+        padding-top: 90px;
+        .container {
+            h2 {
+                @include header2;
+                margin-bottom: 30px;
+            }
+            .about__cards {
+                padding: 40px 0;
+                row-gap: 40px;
+                flex-direction: column;
+                align-items: center;
+                .about__card {
+                    width: 50%;
+                    .card__img {
+                        width: 100px;
+                        height: 90px;
+                        img {
+                            width: 60%;
+                        }
+                    }
+                    p {
+                        font-size: 22px;
+                    }
+                }
+                .hr {
+                    width: 90%;
+                    height: 0;
+                }
+            }
+        }
+    }
+    .service {
+        .container {
+            h2 {
+                @include header2;
+            }
+            .service__cards {
+                flex-wrap: wrap;
+                row-gap: 70px;
+                .service__card {
+                    .card__img {
+                        width: 80px;
+                        height: 80px;
+                    }
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    .projects {
+        .container {
+            h2 {
+                @include header2;
+            }
+            .projects__cards {
+                row-gap: 40px;
+                grid-template-columns: 1fr;
+                p {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}   

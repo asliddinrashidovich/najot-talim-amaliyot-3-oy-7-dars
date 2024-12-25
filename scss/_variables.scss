@@ -1,0 +1,77 @@
+$trans: all ease 0.3s;
+$textcolor: #3D3D3F;
+$maincolor: #FF7A50D4;
+
+@mixin header2 {
+    font-family: DM Sans;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 70.08px;
+    color: $textcolor;
+    text-align: center;
+}
+@mixin header3 {
+    font-family: DM Sans;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46.87px;
+    color: $textcolor;
+    text-align: center;
+}
+@mixin header4 {
+    font-family: DM Sans;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 31.25px;    
+    color: $textcolor;
+}
+
+@mixin btn {
+    background: linear-gradient(2.79deg, #F35F2F, rgba(243, 95, 47, 0.75));
+    opacity: 85%;
+    padding: 14px 28px;
+    position: relative;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    font-family: Rubik;
+    font-size: 20px;
+    transition: $trans;
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 23.7px;
+    overflow: hidden;
+    &::before {
+        content: "Contect Us";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(2.79deg, rgba(243, 95, 47, 0.75) ,  #F35F2F);
+        transition: opacity 0.5s ease;
+        opacity: 1;
+    }
+    &::before {
+        content: "Contact us";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(2.79deg, rgba(243, 95, 47, 0.75) ,  #F35F2F);
+        transition: opacity 0.5s ease;
+        opacity: 0;
+    }
+    &:hover {
+        &::after {
+            opacity: 0;
+        }
+        &::before {
+            opacity: 1;
+        }
+    }
+}
