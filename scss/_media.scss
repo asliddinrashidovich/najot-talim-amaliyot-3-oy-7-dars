@@ -85,6 +85,113 @@
             }
         }
     }
+    .team {
+        padding-top: 60px;
+        .container {
+            h2 {
+                @include header2;
+            }
+            .team__cards {
+                grid-template-columns: 1fr 1fr;
+                .team__card {
+                    .card__img {
+                        height: 400px;
+                        img {
+                            object-position: center top;
+                            height: 110%;
+                            transform: translateY(-30px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .testimonial {
+        .container {
+            h2 {
+                @include header2;
+            }
+            .test__box {
+                width: 500px;
+                overflow: hidden;
+                img {
+                    transform: scale(80%);
+                }
+                .img1 {
+                    position: absolute;
+                    top: -120px;
+                    left: 80px;
+                }
+                .img2 {
+                    position: absolute;
+                    left: -120px;
+                    top: 40px;
+                }
+                .img3 {
+                    position: absolute;
+                    right: -120px;
+                    top: 60px;
+                }
+                .img4 {
+                    position: absolute;
+                    left: 50px;
+                    top: 80px;
+                }
+                .img5 {
+                    position: absolute;
+                    left: -50px;
+                    bottom: -120px;
+                }
+                .img6 {
+                    position: absolute;
+                    right: -80px;
+                    bottom: -120px;
+                }
+                .radius1 {
+                    position: absolute;
+                    top: 200px;
+                    right: 150px;
+                }
+                .radius2 {
+                    position: absolute;
+                    top: 220px;
+                    left: 150px;
+                }
+                .radius3 {
+                    position: absolute;
+                    top: 350px;
+                    left: 140px;
+                }
+                .radius4 {
+                    position: absolute;
+                    bottom: 130px;
+                    right: 200px;
+                }
+            }
+            .test__content {
+                margin-left: calc(40% + 10px);
+            }
+        }
+    }
+    .contact {
+        .container {
+            h2 {
+                @include header2;
+            }
+        }
+    }
+    footer {
+        .container {
+            .footer__box {
+                .footer__header{
+                    width: 200px;
+                }
+                form {
+                    width: 200px;
+                }
+            }
+        }
+    }
 }
 @media screen and (max-width: 600px) {
     @mixin header2 {
@@ -183,6 +290,82 @@
                 p {
                     font-size: 20px;
                 }
+            }
+        }
+    }
+    .team {
+        .container {
+            h2 {
+                @include header2;
+            }
+            .team__cards {
+                grid-template-columns: 1fr;
+                .team__card {
+                    .card__img {
+                        height: 400px;
+                        img {
+                            object-position: center top;
+                            height: 110%;
+                            transform: translateY(-30px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .testimonial {
+        padding-top: 50px;
+        height: 550px;
+        .container {
+            h2 {
+                @include header2;
+                margin-bottom: 30px;
+            }
+            .test__box {
+                left: 50%;
+                transform: scale(50%) translate(-100%, -50%) ;
+            }
+            .test__content {
+                margin-left: calc(30% + 10px);
+                transform: scale(70%) translate(-10%, -270%);
+            }
+        }
+    }
+    .contact {
+        .container {
+            h2 {
+                @include header2;
+            }
+            form {
+                div {
+                    grid-column: span 2;
+                }
+                .btn {
+                    grid-column: span 2;
+                }
+            }
+        }
+    }
+    footer {
+        .container {
+            .footer__box {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 30px;
+                .footer__header{
+                    width: 170px;
+                    grid-column: span 2;
+                }
+                form {
+                    grid-column: span 2;
+                    width: 100%;
+                }
+            }
+            .footer__bottom {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
             }
         }
     }

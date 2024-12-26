@@ -9,6 +9,10 @@ body {
   font-family: "Rubik", serif;
 }
 
+html {
+  scroll-padding-top: 140px;
+}
+
 a {
   text-decoration: none;
 }
@@ -24,6 +28,10 @@ ul {
 
 header {
   padding: 50px 0;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
 }
 header .container {
   display: flex;
@@ -111,7 +119,7 @@ header .container .btn:hover::before {
 }
 
 .hero {
-  padding-top: 50px;
+  padding-top: 200px;
 }
 .hero .container {
   display: flex;
@@ -378,6 +386,504 @@ header .container .btn:hover::before {
 .projects .container .projects__cards .projects__card:hover {
   box-shadow: 0px 4px 22px 0px rgba(95, 95, 95, 0.5);
 }
+.projects .container .button {
+  display: flex;
+  justify-content: center;
+}
+.projects .container .button .btn {
+  background: linear-gradient(2.79deg, #F35F2F, rgba(243, 95, 47, 0.75));
+  opacity: 85%;
+  padding: 14px 28px;
+  position: relative;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-family: Rubik;
+  font-size: 20px;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 23.7px;
+  overflow: hidden;
+  text-transform: uppercase;
+  margin-top: 60px;
+}
+.projects .container .button .btn::before {
+  content: "Contect Us";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(2.79deg, rgba(243, 95, 47, 0.75), #F35F2F);
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+.projects .container .button .btn::before {
+  content: "Contact us";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(2.79deg, rgba(243, 95, 47, 0.75), #F35F2F);
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+.projects .container .button .btn:hover::after {
+  opacity: 0;
+}
+.projects .container .button .btn:hover::before {
+  opacity: 1;
+}
+.projects .container .button .btn::before {
+  content: "View all Projects";
+}
+
+.team {
+  margin-top: 120px;
+}
+.team .container h2 {
+  font-family: DM Sans;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 70.08px;
+  color: #3D3D3F;
+  text-align: center;
+  margin-bottom: 44px;
+}
+.team .container .team__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 36px;
+}
+.team .container .team__cards .team__card {
+  padding: 10px 13px 20px 13px;
+  box-shadow: 0px 4px 120px 0px rgba(0, 0, 0, 0.0509803922);
+  background: linear-gradient(138.88deg, rgba(254, 254, 254, 0) -2.44%, #F9F9F9 -2.43%, rgba(254, 254, 254, 0.51) 98.26%);
+  transition: all ease 0.3s;
+  border: 1px solid #EEEFF1;
+  border-radius: 10px;
+}
+.team .container .team__cards .team__card .card__img {
+  border: 1px solid #EEEFF1;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 250px;
+  width: 100%;
+  margin-bottom: 18px;
+}
+.team .container .team__cards .team__card .card__img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translateY(-20px);
+}
+.team .container .team__cards .team__card h5 {
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  color: #3D3D3F;
+  text-align: center;
+  margin-bottom: 1px;
+}
+.team .container .team__cards .team__card p {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+  color: #999;
+  margin-bottom: 17px;
+}
+.team .container .team__cards .team__card .icons {
+  display: flex;
+  justify-content: center;
+  gap: 11px;
+}
+.team .container .team__cards .team__card .icons .icon {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.team .container .team__cards .team__card .icons .facebook {
+  background-color: #4D77CF;
+}
+.team .container .team__cards .team__card .icons .twitter {
+  background-color: #1DA1F2;
+}
+.team .container .team__cards .team__card .icons .linkiden {
+  background-color: #0077B5;
+}
+.team .container .team__cards .team__card:hover {
+  box-shadow: 0px 4px 120px 0px rgba(0, 0, 0, 0.3);
+}
+
+.testimonial {
+  padding-top: 120px;
+}
+.testimonial .container h2 {
+  font-family: DM Sans;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 70.08px;
+  color: #3D3D3F;
+  text-align: center;
+  margin-bottom: 34px;
+}
+.testimonial .container .test__box {
+  max-width: 743px;
+  height: 547px;
+  margin: 0 auto;
+  position: relative;
+}
+.testimonial .container .test__box .img1 {
+  position: absolute;
+  top: -110px;
+  left: 200px;
+}
+.testimonial .container .test__box .img2 {
+  position: absolute;
+  left: -120px;
+  top: 40px;
+}
+.testimonial .container .test__box .img3 {
+  position: absolute;
+  right: -120px;
+  top: 60px;
+}
+.testimonial .container .test__box .img4 {
+  position: absolute;
+  left: 180px;
+  top: 80px;
+}
+.testimonial .container .test__box .img5 {
+  position: absolute;
+  left: 0;
+  bottom: -120px;
+}
+.testimonial .container .test__box .img6 {
+  position: absolute;
+  right: 0;
+  bottom: -100px;
+}
+.testimonial .container .test__box .radius1 {
+  position: absolute;
+  top: 200px;
+  right: 200px;
+}
+.testimonial .container .test__box .radius2 {
+  position: absolute;
+  top: 220px;
+  left: 240px;
+}
+.testimonial .container .test__box .radius3 {
+  position: absolute;
+  top: 300px;
+  left: 180px;
+}
+.testimonial .container .test__box .radius4 {
+  position: absolute;
+  bottom: 130px;
+  right: 280px;
+}
+.testimonial .container .test__content {
+  box-shadow: 0px 4px 120px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  position: relative;
+  width: 300px;
+  padding: 20px;
+  text-align: center;
+  margin-left: calc(50% + 30px);
+}
+.testimonial .container .test__content p {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20.83px;
+  color: #515155;
+}
+.testimonial .container .test__content h4 {
+  color: rgba(255, 122, 80, 0.831372549);
+  font-family: DM Sans;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26.04px;
+}
+.testimonial .container .test__content span {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18.23px;
+  color: #515155;
+  opacity: 70%;
+}
+
+.contact {
+  padding-top: 100px;
+}
+.contact .container h2 {
+  font-family: DM Sans;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 70.08px;
+  color: #3D3D3F;
+  text-align: center;
+  margin-bottom: 60px;
+}
+.contact .container form {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 24px;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+.contact .container form div {
+  display: flex;
+  flex-direction: column;
+}
+.contact .container form div label {
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 23.44px;
+  margin-bottom: 10px;
+  color: #3D3D3F;
+  opacity: 90%;
+  text-transform: uppercase;
+}
+.contact .container form div input {
+  width: 100%;
+  padding: 19px 12px;
+  box-shadow: 0px 4px 120px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+}
+.contact .container form .message {
+  grid-column: span 2;
+  margin-bottom: 50px;
+}
+.contact .container form .message textarea {
+  width: 100%;
+  padding: 19px 12px;
+  box-shadow: 0px 4px 120px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  border: none;
+  background-color: #fff;
+}
+.contact .container form .btn {
+  background: linear-gradient(2.79deg, #F35F2F, rgba(243, 95, 47, 0.75));
+  opacity: 85%;
+  padding: 14px 28px;
+  position: relative;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-family: Rubik;
+  font-size: 20px;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 23.7px;
+  overflow: hidden;
+  grid-column: 2/3;
+  width: auto;
+}
+.contact .container form .btn::before {
+  content: "Contect Us";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(2.79deg, rgba(243, 95, 47, 0.75), #F35F2F);
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+.contact .container form .btn::before {
+  content: "Contact us";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(2.79deg, rgba(243, 95, 47, 0.75), #F35F2F);
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+.contact .container form .btn:hover::after {
+  opacity: 0;
+}
+.contact .container form .btn:hover::before {
+  opacity: 1;
+}
+.contact .container form .btn::before {
+  content: "Submit project";
+}
+
+footer {
+  padding-top: 90px;
+}
+footer .container .footer__box {
+  display: flex;
+  padding-bottom: 30px;
+  justify-content: space-between;
+}
+footer .container .footer__box .footer__header a {
+  margin-bottom: 12px;
+}
+footer .container .footer__box .footer__header p {
+  margin-bottom: 12px;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25.2px;
+  color: #646464;
+}
+footer .container .footer__box .footer__header .icons {
+  display: flex;
+  gap: 16px;
+}
+footer .container .footer__box .footer__header .icons .icon {
+  background-color: #646464;
+  color: #DADADA;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .container .footer__box ul li {
+  margin-bottom: 15px;
+}
+footer .container .footer__box ul li h3 {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #323232;
+  margin-bottom: 24px;
+}
+footer .container .footer__box ul li a {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #646464;
+}
+footer .container .footer__box form h3 {
+  font-family: DM Sans;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  color: #323232;
+  margin-bottom: 19px;
+}
+footer .container .footer__box form p {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #646464;
+  margin-bottom: 14px;
+}
+footer .container .footer__box form input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1.1px solid #E1E2E4;
+  border-radius: 5px;
+  margin-bottom: 12px;
+}
+footer .container .footer__box form .btn {
+  background: linear-gradient(2.79deg, #F35F2F, rgba(243, 95, 47, 0.75));
+  opacity: 85%;
+  padding: 14px 28px;
+  position: relative;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-family: Rubik;
+  font-size: 20px;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 23.7px;
+  overflow: hidden;
+  width: 100%;
+}
+footer .container .footer__box form .btn::before {
+  content: "Contect Us";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(2.79deg, rgba(243, 95, 47, 0.75), #F35F2F);
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+footer .container .footer__box form .btn::before {
+  content: "Contact us";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(2.79deg, rgba(243, 95, 47, 0.75), #F35F2F);
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+footer .container .footer__box form .btn:hover::after {
+  opacity: 0;
+}
+footer .container .footer__box form .btn:hover::before {
+  opacity: 1;
+}
+footer .container .footer__box form .btn::before {
+  content: "Subscribe";
+}
+footer .container .footer__bottom {
+  padding: 26px 0 44px 0;
+  display: flex;
+  justify-content: space-between;
+}
+footer .container .footer__bottom p {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #646464;
+}
+footer .container .footer__bottom ul {
+  display: flex;
+  gap: 53px;
+}
+footer .container .footer__bottom ul li a {
+  font-family: DM Sans;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #646464;
+}
 
 @media screen and (max-width: 1130px) {
   header .container ul {
@@ -441,6 +947,96 @@ header .container .btn:hover::before {
   }
   .projects .container .projects__cards p {
     font-size: 18px;
+  }
+  .team {
+    padding-top: 60px;
+  }
+  .team .container h2 {
+    line-height: 30.08px;
+  }
+  .team .container .team__cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .team .container .team__cards .team__card .card__img {
+    height: 400px;
+  }
+  .team .container .team__cards .team__card .card__img img {
+    -o-object-position: center top;
+       object-position: center top;
+    height: 110%;
+    transform: translateY(-30px);
+  }
+  .testimonial .container h2 {
+    line-height: 30.08px;
+  }
+  .testimonial .container .test__box {
+    width: 500px;
+    overflow: hidden;
+  }
+  .testimonial .container .test__box img {
+    transform: scale(80%);
+  }
+  .testimonial .container .test__box .img1 {
+    position: absolute;
+    top: -120px;
+    left: 80px;
+  }
+  .testimonial .container .test__box .img2 {
+    position: absolute;
+    left: -120px;
+    top: 40px;
+  }
+  .testimonial .container .test__box .img3 {
+    position: absolute;
+    right: -120px;
+    top: 60px;
+  }
+  .testimonial .container .test__box .img4 {
+    position: absolute;
+    left: 50px;
+    top: 80px;
+  }
+  .testimonial .container .test__box .img5 {
+    position: absolute;
+    left: -50px;
+    bottom: -120px;
+  }
+  .testimonial .container .test__box .img6 {
+    position: absolute;
+    right: -80px;
+    bottom: -120px;
+  }
+  .testimonial .container .test__box .radius1 {
+    position: absolute;
+    top: 200px;
+    right: 150px;
+  }
+  .testimonial .container .test__box .radius2 {
+    position: absolute;
+    top: 220px;
+    left: 150px;
+  }
+  .testimonial .container .test__box .radius3 {
+    position: absolute;
+    top: 350px;
+    left: 140px;
+  }
+  .testimonial .container .test__box .radius4 {
+    position: absolute;
+    bottom: 130px;
+    right: 200px;
+  }
+  .testimonial .container .test__content {
+    margin-left: calc(40% + 10px);
+  }
+  .contact .container h2 {
+    line-height: 30.08px;
+  }
+  footer .container .footer__box .footer__header {
+    width: 200px;
+  }
+  footer .container .footer__box form {
+    width: 200px;
   }
 }
 @media screen and (max-width: 600px) {
@@ -514,5 +1110,64 @@ header .container .btn:hover::before {
   }
   .projects .container .projects__cards p {
     font-size: 20px;
+  }
+  .team .container h2 {
+    font-size: 30px;
+  }
+  .team .container .team__cards {
+    grid-template-columns: 1fr;
+  }
+  .team .container .team__cards .team__card .card__img {
+    height: 400px;
+  }
+  .team .container .team__cards .team__card .card__img img {
+    -o-object-position: center top;
+       object-position: center top;
+    height: 110%;
+    transform: translateY(-30px);
+  }
+  .testimonial {
+    padding-top: 50px;
+    height: 550px;
+  }
+  .testimonial .container h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .testimonial .container .test__box {
+    left: 50%;
+    transform: scale(50%) translate(-100%, -50%);
+  }
+  .testimonial .container .test__content {
+    margin-left: calc(30% + 10px);
+    transform: scale(70%) translate(-10%, -270%);
+  }
+  .contact .container h2 {
+    font-size: 30px;
+  }
+  .contact .container form div {
+    grid-column: span 2;
+  }
+  .contact .container form .btn {
+    grid-column: span 2;
+  }
+  footer .container .footer__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  footer .container .footer__box .footer__header {
+    width: 170px;
+    grid-column: span 2;
+  }
+  footer .container .footer__box form {
+    grid-column: span 2;
+    width: 100%;
+  }
+  footer .container .footer__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
   }
 }/*# sourceMappingURL=main.css.map */
